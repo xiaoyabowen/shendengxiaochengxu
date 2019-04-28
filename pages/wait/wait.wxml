@@ -1,0 +1,13 @@
+<!--pages/wait/wait.wxml-->
+<view class='body'>
+  <view class='content'>
+    <view class='wait'>
+      您提交的信息正在认证中
+      请您耐心等待!
+    </view>
+    <view class='wait2'>
+      <view>如有疑问  请您拨打</view>
+      <view class='num'>400-400-123</view>
+    </view>
+  </view>
+</view>

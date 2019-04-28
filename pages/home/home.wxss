@@ -1,0 +1,16 @@
+/* pages/home/home.wxss */
+.but-box{position: fixed; z-index: 999; right: 20rpx; bottom: 250rpx;  width:66rpx; height: 160rpx; background: #ffffff; border-radius: 10rpx; box-shadow: #666 0px 0px 10px; display: flex; justify-content: center; flex-wrap: wrap; text-align: center; line-height: 80rpx; font-size: 60rpx}
+.but-box .but-add{border-bottom: 1rpx solid #666; width: 100%;}
+
+
+.dingwei{position: fixed; z-index: 999; right: 20rpx; bottom: 150rpx; width: 66rpx; height:66rpx; background: #ffffff; border-radius: 10rpx;}
+.dingwei image{display: block; width: 80%; height: 80%; margin: 10%;}
+
+/*    底部导航按钮     */
+.toger{ width: 750rpx; height: 7vh;line-height:7vh; text-align: center; position: fixed; z-index: 999; bottom: 0rpx; left: 0rpx; background: #ffffff;}
+.fqdd-but{width: 750rpx; height: 100%; background:-webkit-gradient(linear, 0 0, 0 bottom, from(#4ADCF9), to(#20A7EA)); color: #ffffff;clear: both; float: left;}
+/* .grzx-but{width: 375rpx; color:#37C3F3; float: left;} */
+
+page{
+  padding-top: 0 !important;
+}

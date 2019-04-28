@@ -1,0 +1,158 @@
+/* pages/my/order/paysetting/paysetting.wxss */
+
+.content{
+  padding: 0 20rpx;
+}
+
+.setting-header{
+  display: flex;
+  margin-top: 30rpx;
+}
+.setting-left{
+  flex: 1;
+  display: flex;
+  align-items: center;
+}
+/* 设置logo */
+.setting-img{
+  width: 54rpx;
+  height: 51rpx;
+  margin-right:27rpx;
+}
+.setting-img>image{
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+.date-fre{
+  font-size: 20rpx;
+  color: #fff;
+   height: 20rpx; 
+  margin-bottom: 10rpx;
+}
+.suc-fre{
+  font-size: 26rpx;
+  color: #F9C85D;
+}
+.suc-no-fre{
+  color: #fff;
+  font-size: 24rpx;
+}
+/* logo按钮 */
+.setting-right{
+  padding-right: 36rpx;
+}
+.setting-btn{
+  font-size: 20rpx;
+  height: 53rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background:transparent !important;
+  border-radius: 27rpx;
+  border: 1rpx solid #fff;
+}
+/* 当前剩余次数 */
+.setting-fre{
+  display: flex;
+  justify-content: center;
+  margin-top: 48rpx;
+}
+.setting-fre>view{
+  color: #fff;
+  font-size: 20rpx;
+}
+.setting-bigfont{
+  font-size: 56rpx;
+}
+/* 具体的支付类型 */
+.setting-type{
+  display: flex;
+  height: 160rpx;
+  align-items: center;
+  background: #fff;
+  margin-top: 25rpx;
+  border-radius: 30rpx;
+  border: 2rpx solid #F9C85D;
+  padding: 0 85rpx 0 55rpx;
+}
+
+.set-bar{
+  flex: 1;
+  color: #0068B7;
+  font-size: 42rpx;
+}
+.set-price{
+  color: #D90202;
+  font-size: 50rpx;
+}
+.set-mon{
+  font-size: 26rpx;
+}
+.open-server{
+  width: 101rpx;
+  height: 42rpx;
+  border: 1rpx solid #F9C85D;
+  text-align: center;
+  line-height: 42rpx;
+  border-radius: 21rpx;
+  color: #6C2A1C;
+  font-size: 28rpx;
+  margin-right: 20rpx;
+}
+/* 选框一次性付款 */
+.set-section{
+  margin: 30rpx 0 94rpx 20rpx;
+}
+.saet-font{
+  font-size: 20rpx;
+  color: #fff;
+}
+
+/*  重写 checkbox 样式  */
+/* 未选中的 背景样式 */
+checkbox .wx-checkbox-input{
+   border-radius: 50%;/* 圆角 */
+   width: 28rpx; /* 背景的宽 */
+   height: 28rpx; /* 背景的高 */
+   border: 1rpx solid #fff;
+}
+/* 选中后的 背景样式 （红色背景 无边框 可根据UI需求自己修改） */
+checkbox .wx-checkbox-input.wx-checkbox-input-checked{
+   background: #F9C85D;
+   border: 1rpx solid #F9C85D;
+}
+/* 选中后的 对勾样式 （白色对勾 可根据UI需求自己修改） */
+checkbox .wx-checkbox-input.wx-checkbox-input-checked::before{
+   border-radius: 50%;/* 圆角 */
+   width: 28rpx;/* 选中后对勾大小，不要超过背景的尺寸 */
+   height: 28rpx;/* 选中后对勾大小，不要超过背景的尺寸 */
+   line-height: 28rpx;
+   text-align: center;
+   font-size:20rpx; /* 对勾大小 30rpx */
+   color:#2e97f7; /* 对勾颜色 白色 */
+   background: transparent;
+   transform:translate(-50%, -50%) scale(1);
+}
+
+/* 立即续费按钮 */
+.setting-renew{
+  margin: 0 61rpx 48rpx 43rpx;
+  border-radius: 50rpx;
+  height: 94rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 36rpx;
+  color: #0D79BE !important;
+  background:rgba(255,255,255,1) !important;
+  border-radius: 47rpx; 
+}
+.renew-color{
+  color: #FD3E51;
+}
+
+
+
+
+

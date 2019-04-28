@@ -1,0 +1,126 @@
+/* pages/center/center.wxss */
+
+.main {
+  padding: 0 50rpx;
+}
+
+.header {
+  display: flex;
+}
+
+.header .headbox {
+  width: 211rpx;
+  height: 211rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.header .headbox .bor-1 {
+  width: 177rpx;
+  height: 177rpx;
+  box-shadow:3px 3px 21px rgba(35,106,170,0.3);
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: -webkit-linear-gradient(left top, rgba(245, 251, 131, 0.3), rgba(12, 178, 230, 0.3)) no-repeat; /* Safari 5.1 - 6.0 */
+  background: -o-linear-gradient(bottom right, rgba(245, 251, 131, 0.3), rgba(12, 178, 230, 0.3)) no-repeat; /* Opera 11.1 - 12.0 */
+  background: -moz-linear-gradient(bottom right, rgba(245, 251, 131, 0.3), rgba(12, 178, 230, 0.3)) no-repeat; /* Firefox 3.6 - 15 */
+  background: linear-gradient(to bottom right, rgba(245, 251, 131, 0.3), rgba(12, 178, 230, 0.3)) no-repeat; /* 标准的语法（必须放在最后） */
+}
+
+.header .headbox .bor-2 {
+  width: 164rpx;
+  height: 164rpx;
+  border-radius: 50%;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: -webkit-linear-gradient(left top, #f5fb83, #0cb2e6) no-repeat; /* Safari 5.1 - 6.0 */
+  background: -o-linear-gradient(bottom right, #f5fb83, #0cb2e6) no-repeat; /* Opera 11.1 - 12.0 */
+  background: -moz-linear-gradient(bottom right, #f5fb83, #0cb2e6) no-repeat; /* Firefox 3.6 - 15 */
+  background: linear-gradient(to bottom right, #f5fb83, #0cb2e6) no-repeat; /* 标准的语法（必须放在最后） */
+}
+
+.header .headbox image {
+  width: 156rpx;
+  height: 156rpx;
+  border-radius: 50%;
+  background: #fff;
+}
+
+/*文字  */
+
+.header .textbox {
+  flex: 1;
+}
+
+.header .textbox .name {
+  height: 66rpx;
+  line-height: 66rpx;
+  font-size: 38rpx;
+  color: #fff;
+  padding-top: 44rpx;
+}
+
+.header .textbox .tel {
+  height: 50rpx;
+  line-height: 50rpx;
+  font-size: 24rpx;
+  color: #fff;
+}
+
+/*content  */
+
+.content {
+  margin-top: 77rpx;
+}
+
+.content .li {
+  height: 103rpx;
+  line-height: 103rpx;
+  display: flex;
+}
+
+.content .li .icon {
+  margin-right: 27rpx;
+}
+
+.content .li .icon image {
+  width: 34rpx;
+  height: 40rpx;
+  margin: 30rpx 0px;
+}
+
+.content .li .info {
+  flex: 1;
+  line-height: 103rpx;
+  height: 103rpx;
+  color: #fff;
+  font-size: 32rpx;
+}
+
+.content .li .right {
+  text-align: right;
+  color: #fff;
+  font-size: 24rpx;
+  color: #47c5d3;
+  height: 103rpx;
+  position: relative;
+}
+
+.content .li .right .rz {
+  width: 200rpx;
+  position: absolute;
+  right: 27rpx;
+  text-align: right;
+}
+
+.content .li .right image {
+  width: 13rpx;
+  height: 26rpx;
+  margin-top: 39rpx;
+  margin-left: 14rpx;
+}

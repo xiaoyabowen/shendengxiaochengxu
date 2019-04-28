@@ -1,0 +1,32 @@
+/**index.wxss**/
+.userinfo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.userinfo-avatar {
+  width: 128rpx;
+  height: 128rpx;
+  margin: 20rpx;
+  border-radius: 50%;
+}
+
+.userinfo-nickname {
+  color: #aaa;
+}
+
+.usermotto {
+  margin-top: 200px;
+}
+
+/*   弹框的样式  */
+.phone{border:1px solid #dbdbdb; border-radius: 3px; padding: 2px 5px;}
+.password-box{display: flex; justify-content: center; align-items: center; margin-top: 10px; padding: 2px 5px; }
+.password-box input{ flex: 2}
+.password-box button{ flex: 1; font-size: 12px;}
+
+.cur{color: red;}
+
+
+

@@ -1,0 +1,34 @@
+<!--pages/historicalBill/historicalBill.wxml-->
+<view class='content'>
+  <text class='bill'>历史账单</text>
+  <!-- 账单信息 -->
+  <view class='bill-box' wx:if="{{none}}" wx:for="{{billBox}}">
+    <view class='bill-main'>
+        <text class='bill-left'>订单号：</text>
+        <text class='bill-right bill-ding'>{{item.orderNum}}</text>
+    </view>
+    <view class='bill-main'>
+        <text class='bill-left'>付款时间：</text>
+        <text class='bill-right'>{{item.orderDate}}</text>
+    </view>
+    <view class='bill-main'>
+        <text class='bill-left'>订单金额：</text>
+        <text class='bill-right bill-money'>{{item.orderPrice}}元</text>
+    </view>
+    <view class='bill-main'>
+        <text class='bill-left'>订单类型：</text>
+        <text class='bill-right'>{{item.orderType}}</text>
+    </view>
+    <view class='bill-main'>
+        <text class='bill-left'>付款方式：</text>
+        <text class='bill-right'>{{item.orderMode}}</text>
+    </view>
+    <view class='bill-main'>
+        <text class='bill-left bill-hui'>交易流水号：</text>
+        <text class='bill-right bill-hui'>{{item.orderFlow}}</text>
+    </view>
+  </view>
+  <view wx:if="{{!none}}" class='none'>
+    <text>暂无订单</text>
+  </view>
+</view>

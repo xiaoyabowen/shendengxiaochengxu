@@ -1,0 +1,18 @@
+<!--pages/home/home.wxml-->
+<map id="map" longitude="{{longitude}}" latitude="{{latitude}}" scale="{{scale}}" controls="{{controls}}" bindcontroltap="controltap" markers="{{markers}}" bindmarkertap="markertap" polyline="{{polyline}}" bindregionchange="regionchange" bindtap="mapOn"
+  show-location style="width: 100%; height: 93vh;">
+</map>
+
+  <!-- <view class='but-box'>
+    <view class='but-add' bindtap='addScale'>+</view>
+    <view class='but-sub' bindtap='subScale'>-</view>
+  </view>
+  <view class='dingwei' bindtap='subDingwei'>
+    <image wx:if="{{!dingweiButType}}" src='../../images/lib/icon/dingwei-icon.png' mode="scaleToFill"></image>
+    <image wx:else src='../../images/lib/icon/dingweizhong-icon.png' mode="scaleToFill"></image>
+  </view> -->
+
+  <view class='toger'>
+    <navigator class='fqdd-but' url="../placeOrder/placeOrder" open-type="navigate">发起订单</navigator>
+    <!-- <navigator class='grzx-but' url="../center/center">个人中心</navigator> -->
+  </view>

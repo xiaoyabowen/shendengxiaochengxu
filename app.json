@@ -1,0 +1,32 @@
+{
+  "pages": [
+    "pages/home/home",
+    "pages/userInfo/userInfo",
+    "pages/open/open",
+    "pages/payoff/payoff",
+    "pages/login/login",
+    "pages/meetOrder/meetOrder",
+    "pages/placeOrder/placeOrder",
+    "pages/center/center",
+    "pages/useraddress/useraddress",
+    "pages/ordertype/ordertype",
+    "pages/revise/revise",
+    "pages/addRess/addRess",
+    "pages/maptext/maptext",
+    "pages/serviceSetting/serviceSetting",
+    "pages/paysetting/paysetting",
+    "pages/publish/publish",
+    "pages/discuss/discuss",
+    "pages/wait/wait",
+    "pages/logs/logs",
+    "pages/historicalBill/historicalBill",
+    "pages/leadingin/leadingin"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "神灯搜索",
+    "navigationBarTextStyle": "black"
+  },
+  "sitemapLocation": "sitemap.json"
+}

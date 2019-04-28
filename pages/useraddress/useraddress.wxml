@@ -1,0 +1,68 @@
+<!--pages/useraddress/useraddress/useraddress.wxml-->
+<view class='content'>
+
+    <!-- 地址信息 -->
+  <view class='address-box'>
+    <view class='address' wx:for="{{userAddRess}}" wx:for-index="index">
+      <view class='user' data-addid='item.adressId'>
+        <text class='user-name' data-name='item.userName'>{{item.userName}}</text>
+        <text class='user-phone' data-phone='item.userPhone'>{{item.userPhone}}</text>
+      </view>
+      <view class='user-address'>
+        <text class='address-style'>{{item.takePro}} {{item.takeCity}} {{item.takeArea}} {{item.takeStreet}}</text>
+      </view>
+      <!-- 设为默认编辑 -->
+      <view class='edit'>
+        <view class='edit-left'>
+          <view name="checkbox" bindtap="toggleMoren" data-index="{{index}}">
+            <view class='edit-font {{item.ifDefault?"moren":""}}' data-moren='{{index}}'>
+                <image src="../../images/mo.png" class='quecheckimg {{item.ifDefault?"xianshi":""}}'></image>  
+                <image src="../../images/que.png" class='morencheckimg {{item.ifDefault?"":"xianshi"}}'></image>  
+              设为默认
+            </view>
+          </view>
+        </view>
+        <view class='edit-right'>
+          <view class='edit-btn' bindtap='editJump' data-addressid="{{item.addressId}}">
+            <image src='../../images/edit-img.png' class='edit-img'></image>
+            <text class='edit-edit'>编辑</text>
+          </view>
+          <view class='del-btn'  bindtap='showDialogBtn' data-id='{{index}}'  data-statu="open">
+            <image src='../../images/del-img.png' class='del-img'></image>
+            <text class='del-font'>删除</text>
+          </view>
+        </view>
+        
+
+
+        <!-- 弹框内容 -->
+       <!--弹窗-->
+        <view class="modal-mask" bindtap="hideModal" catchtouchmove="preventTouchMove" wx:if="{{showModal}}"></view>
+        <view class="modal-dialog" wx:if="{{showModal}}">
+          <view class="modal-title">提示</view>
+          <view class='model-line'></view>
+          <view class="modal-content">
+              您确定要删除此地址吗？
+          </view>
+          <view class="modal-footer">
+            
+            <view class="btn-confirm" bindtap="addressDel" data-status="confirm">确定</view>
+          </view>
+          <view class="btn-cancel" bindtap="onCancel" data-status="cancel"><image src='../../images/close.png' class='close-img'></image></view>
+        </view>
+
+
+
+        <!--遍历循环的数据没有了要显示的部分-->
+        <!-- <block wx:if="{{shows}}">
+          <view class="shows">数据删除之后要显示的内容部分</view>
+        </block> -->
+
+      </view>
+    </view>
+
+    <!-- 添加地址按钮 -->
+    <view hover-class='none' class='address-renew' bindtap='addressBut'><image src='../../images/add.png' class='add-btn'></image><text class='address-color'>添加地址</text></view>
+  </view> 
+
+</view>

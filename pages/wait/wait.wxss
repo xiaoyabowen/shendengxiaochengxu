@@ -1,0 +1,25 @@
+/* pages/wait/wait.wxss */
+.body{
+  padding: 20rpx;
+}
+.content{
+  margin-top: 250rpx;
+  background: #fff;
+  border-radius: 30rpx;
+  padding: 104rpx 0rpx;
+  text-align: center;
+}
+.wait{
+  font-size: 34rpx;
+  line-height: 49rpx;
+  width: 392rpx;
+  margin: 0rpx auto 74rpx auto;
+}
+.wait2{
+  font-size: 34rpx;
+  display: flex;
+  justify-content: center;
+}
+.wait2 .num{
+  color: #D80202;
+}

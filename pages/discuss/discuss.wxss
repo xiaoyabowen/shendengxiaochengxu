@@ -1,0 +1,75 @@
+/* pages/discuss/discuss.wxss */
+
+.body {
+  padding: 20rpx;
+  padding-top: 0 !important;
+  
+}
+.none{
+  width: 100%;
+  text-align: center;
+  margin-top: 50rpx;
+  color: #fff;
+}
+/*大内容背景  */
+.content {
+  background: #fff;
+  border-radius: 30rpx;
+}
+/*一个大 循环 模块  */
+.discuss {
+  padding: 26rpx;
+  border-bottom: 4rpx solid rgba(0, 0, 0, 0.03);
+}
+/*header 头像和用户名 */
+.discuss .header {
+  display: flex;
+}
+
+.discuss .header .head-pic {
+  width: 82rpx;
+  height: 82rpx;
+  border-radius: 50%;
+  overflow: hidden;
+}
+.discuss .header .head-pic image{
+  width: 100%;
+  height: 100%;
+}
+.discuss .header .name {
+  flex: 1;
+  height: 82rpx;
+  line-height: 82rpx;
+  font-size: 28rpx;
+  padding-left: 28rpx;
+  color: #fab53e;
+}
+/*评论内容区域  */
+.discuss .dis-con {
+  line-height: 38rpx;
+  padding: 36rpx 0rpx;
+  font-size: 26rpx;
+}
+/*评论照片区域  */
+.discuss .dis-pic .img-box {
+  width: 33%;
+  height: 210rpx;
+  box-sizing: border-box;
+  padding: 8rpx;
+  float: left;
+  background: #fff;
+}
+.discuss .dis-pic .img-box:nth-of-type(3n){
+  margin-right: 0rpx;
+}
+.clearfix:after {
+  content: ".";
+  display: block;
+  height: 0;
+  clear: both;
+  visibility: hidden;
+}
+.dis-pics {
+  width: 100%;
+  height: 100%
+}

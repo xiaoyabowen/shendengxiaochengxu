@@ -1,0 +1,61 @@
+/* pages/historicalBill/historicalBill.wxss */
+
+.content{
+  /* padding:0 20rpx; */
+  padding:0 30rpx;
+}
+/* 历史账单 */
+.bill{
+  padding-left: 31rpx;
+  font-size: 58rpx;
+  color: #fff;
+  
+}
+
+/* 账单内容 */
+.bill-box{
+  background:rgba(255,255,255,1);
+  border-radius: 30rpx; 
+  box-shadow:5px 8px 27px rgba(21,115,153,0.26);
+  padding: 24rpx 0 22rpx 0;
+  margin-top: 32rpx;
+}
+.bill-main{
+  height: 60rpx;
+  display: flex;
+  margin-bottom: 22rpx;
+  height: 27rpx;
+}
+.bill-left,.bill-right{
+  
+  text-align: left;
+}
+.bill-left{
+  font-size: 28rpx;
+  width: 25%;
+  padding-left: 50rpx;
+}
+.bill-right{
+  width: 75%;
+  font-size: 24rpx;
+}
+/* 订单号颜色 */
+.bill-ding{
+  color: #FAB53E;
+}
+/* 金额 */
+.bill-money{
+  color: #D90202;
+}
+/* 交易流水号 */
+.bill-hui{
+  color:rgba(0,0,0,0.5);
+  font-size: 24rpx;
+}
+/*没有账单的样式  */
+.none{
+  width: 100%;
+  text-align: center;
+  margin-top: 50rpx;
+  color: #fff;
+}

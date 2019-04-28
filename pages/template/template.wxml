@@ -1,0 +1,121 @@
+<!--模板一 主要是进行   待完成  已完成  带评价   部分的页面信息渲染 -->
+<template name="index">
+  <view class='all-order' wx:for="{{orderList}}" wx:for-index="index" wx:if="{{item.studytext == study}}">
+
+    <view class='order-header' data-index='{{index}}' bindtap='hiddenBtn'>
+      <view class='orderlist {{item.hidden?"bordern":"borderl"}}'>
+        订单号:{{item.num}}
+      </view>
+      <view class='completion'>
+        {{item.studytext}}
+        <view class='span1' wx:if='{{item.hidden==true}}'></view>
+        <view class='span2' wx:else></view>
+      </view>
+    </view>
+
+    <view class="show-infos" hidden='{{item.hidden}}'>
+      <view class='infos'>
+        <view class='infos_title'>
+          发起时间
+        </view>
+        <view class='infos_content'>
+          {{item.time_fa}}
+        </view>
+      </view>
+      <view class='infos'>
+        <view class='infos_title'>
+          预约时间
+        </view>
+        <view class='infos_content'>
+          {{item.time_yu}}
+        </view>
+      </view>
+      <view class='infos'>
+        <view class='infos_title'>
+          预约人姓名
+        </view>
+        <view class='infos_content'>
+          {{item.name}}
+        </view>
+      </view>
+      <view class='infos'>
+        <view class='infos_title'>
+          联系方式
+        </view>
+        <view class='infos_content'>
+          {{item.tel}}
+        </view>
+      </view>
+      <view class='infos'>
+        <view class='infos_title'>
+          取卡地址
+        </view>
+        <view class='infos_content'>
+          {{item.address_qu}}
+        </view>
+      </view>
+      <view class='infos'>
+        <view class='infos_title'>
+          医院地址
+        </view>
+        <view class='infos_content'>
+          {{item.address_yi}}
+        </view>
+      </view>
+      <view class='infos'>
+        <view class='infos_title'>
+          收货地址
+        </view>
+        <view class='infos_content'>
+          {{item.address_sh}}
+        </view>
+      </view>
+
+      <view class='infos' wx:if="{{study != '待付款'}}">
+        <view class='infos_title'>
+          支付方式
+        </view>
+        <view class='infos_content'>
+          {{item.pay}}
+        </view>
+      </view>
+      <view class='infos' wx:if="{{item.pay == '次付'}}">
+        <view class='infos_title'>
+          支付金额
+        </view>
+        <view class='infos_content'>
+          {{item.bal}}
+        </view>
+      </view>
+      <view class='infos' wx:if="{{item.server_name == ''?false:true}}">
+        <view class='infos_title'>
+          服务人姓名
+        </view>
+        <view class='infos_content'>
+          {{item.server_name}}
+        </view>
+      </view>
+      <view class='infos' wx:if="{{item.server_name == ''?false:true}}">
+        <view class='infos_title'>
+          服务人联系方式
+        </view>
+        <view class='infos_content'>
+          {{item.server_phone}}
+        </view>
+      </view>
+      <navigator hover-class='none' wx-if="{{item.studytext == '待评价'}}" data-i='{{index}}' bindtap='submit' class='gobtn'>
+        去评价
+      </navigator>
+
+      <navigator hover-class='none' wx-if="{{item.studytext == '待完成'}}" data-i='{{index}}' bindtap='queren' class='gobtn'>
+        {{item.qr_status == "1"?"确认完成":"等待服务人员确认中..."}}
+      </navigator>
+      <navigator hover-class='none' wx-if="{{item.studytext == '待付款'}}" data-i='{{index}}' bindtap='gofu' class='gobtn'>
+        去付款
+      </navigator>
+
+    </view>
+  </view>
+</template>
+
+

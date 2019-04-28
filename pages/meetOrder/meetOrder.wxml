@@ -1,0 +1,104 @@
+<!--pages/meetOrder/meetOrder.wxml-->
+<image src='../../images/bg001.png' mode='scaleToFill' style='width:100%; height:100vh;display:block;'></image>
+
+
+
+
+<!--   提示框   -->
+<!-- <modal hidden="{{hiddenmodalput}}" confirm-text="联系客服" cancel-text="取消订单" bindcancel="cancel" bindconfirm="confirm">
+  <view class='title'>倒计时</view>
+  <view class='jishiqi'>{{countDownMinute}}分{{countDownSecond}}秒</view>
+  <view class='prompt1'>如果长时间没有服务人员接单，</view>
+  <view class='prompt2'>你可以选择稍后继续发起或者直接联系客服</view>
+</modal>     -->
+
+<!--   下单提示框   -->
+<view class='motai1' hidden="{{hiddenmodalput}}">
+  <view class="motai1-mask" bindtap="hidemotai1"></view>
+  <view class="motai1-dialog">
+    <view class="motai1-title">倒计时</view>
+    <view class="motai1-content">
+
+      <view class='jishiqi'>{{countDownMinute}}分{{countDownSecond}}秒</view>
+      <view class='prompt1'>如果长时间没有服务人员接单，</view>
+      <view class='prompt2'>你可以选择稍后继续发起或者直接联系客服</view>
+    </view>
+    <view class="motai1-footer clearfloat">
+      <view class="motai1-btn-confirm" bindtap="confirm">联系客服</view>
+      <view class="motai1-btn-cancel" bindtap="cancel">取消订单</view>
+    </view>
+  </view>
+</view>
+
+
+
+
+
+
+
+
+
+
+<!--   接单超时提示框   -->
+  <!-- <modal hidden="{{hiddenmodalput1}}" confirm-text="联系客服" cancel-text="再次发起" bindcancel="cance2" bindconfirm="confirm">
+  <view class='title' style='color:#FB5265'>很抱歉！</view>
+  <view class='prompt1'>我们的服务人员暂时繁忙，</view>
+  <view class='prompt2'>您可以选择再次发起订单，</view>
+  <view class='prompt2'>也可以选择直接联系客服哦，</view>
+  <view class='prompt2'>给您带来的不便，请您原谅！</view>
+</modal>   -->
+
+
+
+
+
+
+<!--   接单超时提示框   -->
+<view class='motai1' hidden="{{hiddenmodalput1}}">
+  <view class="motai1-mask" bindtap="hidemotai1"></view>
+  <view class="motai1-dialog">
+    <view class="motai1-title">很抱歉！</view>
+    <view class="motai1-content">
+
+      <view class='prompt1'>我们的服务人员暂时繁忙，</view>
+      <view class='prompt2'>您可以选择再次发起订单，</view>
+      <view class='prompt2'>也可以选择直接联系客服哦，</view>
+      <view class='prompt2'>给您带来的不便，请您原谅！</view>
+    </view>
+    <view class="motai1-footer clearfloat">
+      <view class="motai1-btn-confirm" bindtap="confirm">联系客服</view>
+      <view class="motai1-btn-cancel" bindtap="cance2">再次发起</view>
+    </view>
+  </view>
+</view>
+
+
+
+
+
+<!--   接单成功提示框   -->
+<!-- <modal hidden="{{hiddenmodalput2}}" confirm-text="去支付" bindconfirm="quzhifu" no-cancel="{{true}}">
+
+  <view class='title'>接单成功</view>
+    <view class='jishiqi'>请尽快完成支付!</view>
+  <view class='prompt1'>服务人员:<view style='display:inline; color:#0D79BE;'>{{staffUser}}</view></view>
+  <view class='prompt2' style='color:#0D79BE;'>{{staffPhone}}</view>
+</modal> -->
+
+
+
+<view class='motai1' hidden="{{hiddenmodalput2}}">
+  <view class="motai1-mask" bindtap="hidemotai1"></view>
+  <view class="motai1-dialog">
+    <view class="motai1-title">接单成功</view>
+    <view class="motai1-content">
+
+      <view class='prompt1'>服务人员:<view style='display:inline; color:#0D79BE;'>{{staffUser}}</view></view>
+      <view class='prompt2' style='color:#0D79BE;'>{{staffPhone}}</view>
+    </view>
+    <view class="motai1-footer clearfloat">
+      <view class="motai1-btn-confirm" bindtap="quzhifu" style='float: none;margin: 0 auto;'>去支付</view>
+      
+    </view>
+  </view>
+</view>

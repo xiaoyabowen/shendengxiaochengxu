@@ -1,0 +1,37 @@
+<!--pages/open/open.wxml    开通  续费 -->
+<view class='content'>
+<!-- 开通  续费  title -->
+  <view class='open-text'>
+    <text class='open-open'>{{type?"续费":"开通"}}</text>
+  </view>
+  <!-- 支付类型框 -->
+  <view class='open-type' style='background-image:url("https://www.flaxl.cn/uploads/set-type-bj.png"); background-size:100% 100%;'>
+    <!-- <image src=''></image> -->
+    <view class='type-title'>{{typeTitle.openType}}￥{{typeTitle.openPrice}}</view>
+    <text class='type-content'>{{note}}</text>
+    
+  </view>
+
+  <!-- 微信支付label -->
+  <view class="open-section">
+      <label class='saet-font'>
+        <view class='open-paymoney'>
+          <view class='open-img'>
+            <image src="../../images/wekat-pay.png"></image>            
+          </view>
+          <view class='open-term'>
+            <view class='open-pay'>微信支付</view>
+            <view class='open-font'>推荐安装微信5.0及以上版本使用</view>
+          </view>
+          
+        </view>
+        <!-- <checkbox value="checkbox1" class='open-check'/> -->
+      </label>
+  </view>
+
+  <!-- 确认支付按钮 -->
+  <view class='set-btn'>
+    <navigator url='' bindtap='submit' class='setting-renew'>确认支付<text class='renew-color'>￥{{typeTitle.openPrice}}</text></navigator>
+  </view>
+
+</view>

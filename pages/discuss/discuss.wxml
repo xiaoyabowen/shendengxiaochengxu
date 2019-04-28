@@ -1,0 +1,44 @@
+<!--pages/discuss/discuss.wxml-->
+<!--评论展示-->
+<view class='body'>
+  <view class='content'>
+    <view class='discuss' wx:for="{{discuss}}" wx:for-index="idx" hidden='{{none}}'>
+      <!--评论展示   顶部   用户图片和用户姓名   （不显示头像和姓名）  -->
+      <view class='header'>
+        <view class='head-pic'>
+          <image src='{{item.head_pic}}'></image>
+        </view>
+        
+        <view class='name'>{{item.name}}</view>
+      </view>
+      <!--评论内容   文字部分  -->
+      <view class='dis-con'>
+        <!--用户没有填写评论 -->
+        <view wx:if="{{item.discuss_con == undefined}}">
+          此用户没有填写评论。
+        </view>
+        <!--填写评论  -->
+        <view wx:else>
+          {{item.discuss_con}}
+        </view>
+        
+      </view>
+      <!--评论图片区域  -->
+      <view class='dis-pic clearfix'>
+        <view class='img-box' wx:for="{{item.discuss_pic}}" wx:for-item="items" >
+          <image class='dis-pics'
+          mode='center'
+          data-src='{{items.comment_img}}' 
+          src='{{items.comment_img}}'
+          data-index='{{idx}}' 
+          bindtap="previewImage"></image>
+        </view>
+      </view>
+    </view>
+    
+  </view>
+  <view hidden='{{!none}}' class='none'>
+    <image src='../../images/bj002.png' mode='aspectFit' style='display:block; opacity:0.3; width:30%; heihght:auto; margin: 0 auto; margin-top:100rpx;'></image>
+      <text>暂无评论</text>
+    </view>
+</view>

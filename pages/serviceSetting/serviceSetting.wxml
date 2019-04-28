@@ -1,0 +1,69 @@
+<!--服务费设置  页面-->
+
+
+<!-- 具体支付类型 自定义模板 -->
+<template name="setting">
+  <view class='setting-type {{select?"selected":""}}' bindtap='mode' data-index='{{index}}'>
+    <view class='set-bar'>{{bar}}</view>
+    <view class='open-server' wx-if="{{frequencys == 0 && index!==3}}">开通</view>
+    <view class='open-server' wx-if="{{frequencys !== 0 && index!==3 && setSucfonts==index}}">续费</view>
+    <view class='set-price'>
+      <text class='set-mon'>￥</text>{{price}}
+    </view>
+  </view>
+</template>
+
+
+<!-- 历史账单 期限 -->
+<view class='content'>
+  <view class='setting-header'>
+    <!-- header头部左部分 -->
+    <view class='setting-left'>
+      <view class='setting-img'>
+        <image src='{{setLogin?settingLogin.setLoginImg:settingNoneLogin.setLoginImg}}'></image>
+      </view>
+      <view class='setting-term'>
+        <!--登录状态  -->
+        <view class='date-fre' wx-if="{{setLogin}}">{{settingLogin.setDate}}到期</view>
+        <view class='suc-fre' wx-if="{{setLogin}}">恭喜您已开通{{settingLogin.setSucfont}}费</view>
+        <!-- 未登录状态文字 -->
+        <view class='suc-no-fre' wx-if="{{!setLogin}}">您还未开通套餐</view>
+      </view>
+    </view>
+    <!-- header 右部分 -->
+    <view class='setting-right'>
+      <navigator url='../historicalBill/historicalBill' class='setting-btn'>历史账单</navigator>
+    </view>
+  </view>
+
+
+
+  <!-- 当前剩余次数 -->
+  <view class='setting-fre' wx-if="{{setLogin}}">
+    <view>当前剩余次数
+      <text class='setting-bigfont'>{{frequency}}</text>次</view>
+  </view>
+
+  <!-- 具体的支付类型 -->
+
+  <block wx:for="{{settings}}" wx:for-index="index">
+    <template is="setting" data="{{...item,index:index,bars:settingLogin.setSucfont,frequencys:frequency,setSucfonts:settingLogin.setSucfontindex,selects:settings[index].select}}"></template>
+  </block>
+
+  <!-- 选框一次性付款 -->
+  <view class="set-section">
+    <checkbox-group name="checkbox">
+      <label class='saet-font'>
+        <checkbox value="checkbox1" disabled='true' checked='checked' class='set-check' />{{node}}</label>
+    </checkbox-group>
+  </view>
+
+  <!-- 立即续费按钮 -->
+  <navigator hover-class='none' bindtap='navigator' class='setting-renew' wx-if="{{btn_show}}">立即{{frequency>0?"续费":"开通"}}
+    <text class='renew-color'>￥{{btn_price}}</text>
+  </navigator>
+  
+
+
+
+</view>

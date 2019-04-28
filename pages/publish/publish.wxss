@@ -1,0 +1,138 @@
+/* @import "../lib/weui.wxss"; */
+/* pages/publish/publish.wxss */
+.body {
+  padding: 20rpx;
+  padding-top: 0 !important;
+}
+/*内容  */
+.content{
+  background: #fff;
+  border-radius: 30rpx;
+  padding-bottom: 65rpx;
+  margin-bottom: 50rpx;
+}
+/*内容头部  */
+.header-pub{
+  padding-top: 15rpx;
+  padding-left: 33rpx;
+  height: 106rpx;
+  line-height: 106rpx;
+  font-size: 36rpx;
+  border-bottom:1rpx solid rgba(39,39,39,0.15);
+}
+/*星级评分  */
+.content-pub{
+  margin-top: 40rpx;
+  display: flex;
+  padding: 0rpx 56rpx; 
+}
+.content-pub>view{
+  flex: 1;
+}
+.content-pub>view>image{
+  width: 53rpx;
+  height: 53rpx;
+}
+.content-pub .scr{
+  height: 84rpx;
+  line-height: 84rpx;
+  font-size: 26rpx;
+  color: #272727;
+}
+/*评论  */
+.text{
+  padding: 0 59rpx;
+  height: 340rpx;
+}
+.text textarea{
+  width: 100%;
+  font-size: 26rpx;
+  line-height: 34rpx;
+}
+/*相机  */
+.clearfix:after {
+  content: ".";
+  display: block;
+  height: 0;
+  clear: both;
+  visibility: hidden;
+}
+.creame{
+  padding: 0px 56rpx;
+}
+
+.weui-uploader__input-box {
+  float: left;
+  position: relative;
+  margin-right: 9rpx;
+  margin-bottom: 9rpx;
+  width: 162rpx;
+  height: 162rpx;
+  border: 1rpx dashed rgba(112,112,112,0.51);
+}
+.weui-uploader__input-box:active {
+  border-color: #999999;
+}
+.weui-uploader__input-box:active:before,
+.weui-uploader__input-box:active:after {
+  background-color: #999999;
+}
+.weui-uploader__input-box .creame_img{
+  width: 71rpx;
+  height: 59rpx;
+  margin: 32rpx auto 0rpx auto;
+  margin-left: 45rpx;
+}
+/*上传图片4个文字  */
+.up_img{
+  font-size: 26rpx;
+  width: 100%;
+  text-align: center;
+  height: 64rpx;
+  line-height: 64rpx;
+  color: rgba(39,39,39,0.75);
+}
+/*上传以后的照片样式  */
+.weui-uploader__file {
+  float: left;
+  box-sizing: border-box;
+  padding-right: 20rpx;
+  padding-bottom: 20rpx;
+}
+.weui-uploader__img {
+  display: block;
+  width: 79px;
+  height: 79px;
+}
+.weui-uploader__file_status {
+  position: relative;
+}
+.weui-uploader__file_status:before {
+  content: " ";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+.weui-uploader__file-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  color: #FFFFFF;
+}
+.submit{
+  background: #fff;
+  width: 86%;
+  margin: 0px auto;
+  height: 96rpx;
+  line-height: 96rpx;
+  text-align: center;
+  border-radius: 48rpx;
+  font-size:36rpx;
+  font-family:PingFangSC-Regular;
+  color:rgba(13,121,190,1);
+}

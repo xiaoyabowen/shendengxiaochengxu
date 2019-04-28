@@ -1,0 +1,99 @@
+<!--pages/placeOrder/placeOrder.wxml-->
+
+
+<view class='content'>
+  <view class='form-box'>
+    <!-- 页面主体  -->
+    <view class='form-body'>
+      <view class='form-item xingming'>
+        <view class='form-item-name item1'>
+          <view class='form-item-name-text'>联系人</view>
+          <input class='form-item-name-input' type='text' value='{{namu}}' bindinput='nameVal' placeholder='名字' />
+        </view>
+
+      </view>
+      <view class='form-item2'>
+        <block wx:if="{{sex==1}}">
+          <view class="nan" bindtap='sexSelect' data-type='1'>
+            <image class='nan-img' src='../../images/lib/icon/nan-icon-on.png' mode='aspectFit'></image>
+            <text style='color:#2294EC'>先生</text>
+          </view>
+        </block>
+        <block wx:else>
+          <view class="nan" bindtap='sexSelect' data-type='1'>
+            <image class='nan-img' src='../../images/lib/icon/nan-icon.png' mode='aspectFit'></image>
+            <text>先生</text>
+          </view>
+        </block>
+
+        <block wx:if="{{sex==2}}">
+          <view class="nv" bindtap='sexSelect' data-type='2'>
+            <image class='nan-img' src='../../images/lib/icon/nv-icon-on.png' mode='aspectFit'></image>
+            <text style='color:#F83143'>女士</text>
+          </view>
+        </block>
+        <block wx:else>
+          <view class="nv" bindtap='sexSelect' data-type='2'>
+            <image class='nan-img' src='../../images/lib/icon/nv-icon.png' mode='aspectFit'></image>
+            <text>女士</text>
+          </view>
+        </block>
+      </view>
+
+      <view class='form-item3 clearfloat'>
+        <view class='label'>联系方式</view>
+        <input class='phone-input' type='number' value="{{lianxi1}}"  bindinput='phone1' placeholder='请输入联系方式' />
+      </view>
+      <view class='form-item3 clearfloat'>
+        <view class='label'>联系方式2</view>
+        <input class='phone-input' type='number' bindinput='phone2' placeholder='选填' />
+        
+      </view>
+    </view>
+    <view class='form-body2'>
+      <!-- 选项卡 -->
+      <view class="swiper-tab">
+        <view class="swiper-tab-list {{currentTab==0 ? 'on' : ''}}" data-current="0" bindtap="swichNav">取卡地址</view>
+        <view class="swiper-tab-list {{currentTab==1 ? 'on' : ''}}" data-current="1" bindtap="swichNav">医院地址</view>
+        <view class="swiper-tab-list {{currentTab==2 ? 'on' : ''}}" data-current="2" bindtap="swichNav">送达地址</view>
+      </view>
+
+      <swiper current="{{currentTab}}" class="swiper-box" duration="300" bindchange="bindChange">
+        <!-- 我是取卡地址 -->
+        <swiper-item>
+
+          <view bindtap="moveToLocation" class='clearfloat' style='height:80rpx; padding-top:30rpx; line-height:80rpx;'>
+          <image mode='aspectFit' src='../../images/lib/icon/dingwei.png' style="width:30rpx; height:30rpx; float:left;margin-top:10rpx; margin-right: 10rpx;"></image>
+          <input type='text' disabled='true' placeholder='{{detailedAddress1}}'></input></view>
+          <input type='text' style='padding-top:30rpx; border-top:2rpx solid #F4F4F4;' bindinput='address1' placeholder='请输入详细地址' />
+
+        </swiper-item>
+        <!-- 我是医院地址 -->
+        <swiper-item>
+          <view bindtap="moveToLocation2" class='clearfloat' style='height:80rpx; padding-top:30rpx; line-height:80rpx;'>
+          <image mode='aspectFit' src='../../images/lib/icon/dingwei.png' style="width:30rpx; height:30rpx; float:left;margin-top:10rpx; margin-right: 10rpx;"></image>
+          <input type='text' disabled='true' placeholder='{{detailedAddress2}}'></input></view>
+          <input type='text' style='padding-top:30rpx; border-top:2rpx solid #F4F4F4;' bindinput='address2' placeholder='请输入详细地址' />
+
+        </swiper-item>
+        <!-- 我是送达地址 -->
+        <swiper-item>
+          <view bindtap="moveToLocation3" class='clearfloat' style='height:80rpx; padding-top:30rpx; line-height:80rpx;'>
+          <image mode='aspectFit' src='../../images/lib/icon/dingwei.png' style="width:30rpx; height:30rpx; float:left;margin-top:10rpx; margin-right: 10rpx;"></image>
+          <input type='text' disabled='true' placeholder='{{detailedAddress3}}'></input></view>
+          <input type='text' style='padding-top:30rpx; border-top:2rpx solid #F4F4F4;' bindinput='address3' placeholder='请输入详细地址' />
+
+        </swiper-item>
+      </swiper>
+
+    </view>
+    <!--/ 页面主体  -->
+
+    <view class='button' bindtap="default" plain="{{true}}">保存</view>
+  </view>
+
+
+
+</view>
+
+

@@ -1,0 +1,52 @@
+/* pages/placeOrder/placeOrder.wxss */
+
+
+.content{ width: 710rpx; padding: 0rpx 20rpx; font-size: 30rpx; margin-bottom: 40rpx;}
+.form-box{width: 710rpx; height: auto;}
+.form-body{background: #fff; padding:40rpx; border-radius: 10rpx 10rpx 0rpx 0rpx; overflow: hidden; }
+
+.form-item{ height: auto; margin-bottom: 20rpx; display: flex;  align-items: center; line-height: 60rpx;}
+.label{margin-right: 20rpx;  font-size: 26rpx;width: 150rpx;}
+
+.xingming{display: flex;}
+.item1{display: flex; align-items: center; justify-content: flex-start; flex: 3}
+.form-item-name-text{ margin-right: 40rpx; font-size: 26rpx; width: 150rpx;}
+.form-item-name-input{display: inline-block;font-size: 26rpx;}
+.daoru{width: 100rpx; height: 50rpx; line-height: 50rpx; border-radius: 25rpx; font-size: 28rpx; text-align: center;color: #fff;  background: linear-gradient(to bottom right, #F8CE64 , #FCAD79) no-repeat fixed top;}
+
+.form-item2{width: 100%; height: auto; text-align: center; border-bottom: 2rpx solid #F7F7F7; padding-bottom: 19rpx;}
+.form-item2 .nan,.form-item2 .nv{width: 128rpx; height: 50rpx; line-height: 50rpx; display: inline; border:2rpx solid #F4F4F4;padding: 14rpx 20rpx; border-radius: 50rpx; margin: 0rpx 20rpx;}
+.form-item2 .nan-img{width: 24rpx; height: 24rpx; margin:0rpx 10rpx;}
+
+.form-item3{height: 50rpx; padding: 20rpx 0rpx;  line-height: 50rpx; border-bottom: 2rpx solid #F4F4F4; display: flex; flex: 1;}
+.form-item3 .label{}
+.addInput{width: 50rpx; height: 50rpx; order:3; flex: 1; justify-content: flex-end;}
+.phone-input{float: left; font-size: 26rpx;}
+
+.form-body2{background: #fff; padding:40rpx; border-radius: 0rpx 0rpx 10rpx 10rpx; overflow: hidden; margin-top: 4rpx;}
+/* 选项卡 */
+.swiper-tab{width: 100%; text-align: center;line-height: 80rpx;}  
+.swiper-tab-list{ font-size: 30rpx; display: inline-block; width: 33.33%; color: #777777;  }  
+.on{ color: #da7c0c; border-bottom: 5rpx solid #da7c0c;}  
+  
+.swiper-box{ display: block; height: 200rpx; line-height: 100rpx; width: 100%; overflow: hidden; text-align: left; 
+margin-right: 10rpx;
+}  
+
+
+.picker{height: 100rpx; text-align: left;}
+
+
+.button{height: 94rpx; line-height: 94rpx; background-color: #fff!important; border-radius:47rpx; color:#0D79BE!important; margin-top: 150rpx;
+position: absolute;
+left: 0;
+bottom: 48rpx;
+width: 86%;
+margin: 0 52rpx;
+text-align: center;
+font-size: 36rpx;
+}
+.button-hover{
+  padding: 10rpx 10rpx;
+}
+

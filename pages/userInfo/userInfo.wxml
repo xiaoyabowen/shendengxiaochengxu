@@ -1,0 +1,49 @@
+<!--pages/my/user/userInfo/userInfo.wxml-->
+
+
+<template name="upImg">
+  <view class='clearfloat item'>
+    <view class='leImg'>
+      <image src='{{imgUrl}}' mode='aspectFit'></image>
+    </view>
+    <view class='shenfenzheng-box'>
+      <block wx:if="{{!imageList1}}">
+        <view bindtap="chooseImage1" data-e="{{index}}">
+          <view class="weui-uploader__input-box">
+            <view class="weui-uploader__input"></view>
+          </view>
+          <text class='title'>{{text}}</text>
+        </view>
+      </block>
+      <block wx:else>
+        <view class='up-img'>
+          <view class='newUpload' bindtap="chooseImage1" data-e="{{index}}"><image src='../../images/shangcuan.png' mode='aspectFit'></image></view>
+          <image src='{{imageList1}}' mode='aspectFill' data-src="{{imageList1}}" bindtap="previewImage"></image>
+        </view>
+      </block>
+    </view>
+  </view>
+</template>
+
+<view class='centent'>
+  <view class='clearfloat form1'>
+    <view class='item'>
+      <view class='lable'>姓名：</view>
+      <input type='text' placeholder='请输入姓名' bindinput='phone1' value='{{user_name}}'></input>
+    </view>
+    <view class='item'>
+      <view class='lable'>身份证：</view>
+      <input type='text' placeholder-style='color:#999;' placeholder='请输入身份证号' bindinput='phone2' value='{{id_number}}'></input>
+    </view>
+  </view>
+  <view class='form2'>
+     <block wx:for="{{upImgs}}">
+      <template is="upImg" data="{{...item}}" />
+    </block>
+  </view>
+
+  <view wx:if="{{renzhengok == 2 || renzhengok == 4}}">
+    <view class='button' bindtap="default">提交申请</view>
+  </view>
+
+</view>

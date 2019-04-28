@@ -1,0 +1,49 @@
+<!--pages/publish/publish.wxml-->
+<view class='body'>
+  <view class='content'>
+    <view class='header-pub'>
+      订单号：{{ordernum}}
+    </view>
+    <view class='content-pub'>
+      <view>
+        <image src='{{flag>=1?star_ora:star_gray}}' bindtap="changeColor11"></image>
+        <view class='scr'>极差</view>
+      </view>
+      <view>
+        <image src='{{flag>=2?star_ora:star_gray}}' bindtap="changeColor12"></image>
+        <view class='scr'>较差</view>
+      </view>
+      <view>
+        <image src='{{flag>=3?star_ora:star_gray}}' bindtap="changeColor13"></image>
+        <view class='scr'>一般</view>
+      </view>
+      <view>
+        <image src='{{flag>=4?star_ora:star_gray}}' bindtap="changeColor14"></image>
+        <view class='scr'>不错</view>
+      </view>
+      <view>
+        <image src='{{flag>=5?star_ora:star_gray}}' bindtap="changeColor15"></image>
+        <view class='scr'>很棒</view>
+      </view>
+    </view>
+    <view class='text'>
+      <textarea maxlength="300" bindinput='bindtext' placeholder='亲，您有什么需要说的？'></textarea>
+    </view>
+    <view class='creame clearfix'>
+      <view class="weui-uploader__files">
+        <block wx:for="{{imageList}}" wx:for-item="image">
+          <view class="weui-uploader__file">
+            <image class="weui-uploader__img" mode='aspectFill' src="{{image}}" data-src="{{image}}" bindtap="previewImage"></image>
+          </view>
+        </block>
+      </view>
+      <view class="weui-uploader__input-box" bindtap="chooseImage">
+          <image class='creame_img' src='../../images/camera3x.png'></image>
+          <view class='up_img'>上传图片</view> 
+      </view>
+    </view>
+  </view>
+  <navigator  bindtap='submit' hover-class='none' class='submit'>
+    提交评论
+  </navigator>
+</view>

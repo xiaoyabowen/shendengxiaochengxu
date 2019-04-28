@@ -1,0 +1,22 @@
+<!--pages/useraddress/useraddress/useraddress.wxml-->
+<view class='content'>
+  <!-- 地址信息 -->
+  <block wx:if="{{none}}">
+    <view class='address-box'>
+      <view hover-class='none' class='address' wx:for="{{userAddRess}}" data-index="{{index}}" wx:for-index="index" bindtap='click'>
+        <view class='user' data-addid='item.adressId'>
+          <text class='user-name' data-name='item.userName'>{{item.userName}}</text>
+          <text class='user-phone' data-phone='item.userPhone'>{{item.userPhone}}</text>
+        </view>
+        <view class='user-address'>
+          <text class='address-style'>{{item.takepro}}{{item.takecity}}{{item.takearea}}{{item.takestreet}}</text>
+        </view>
+      </view>
+    </view>
+  </block>
+  <block wx:else>
+    <view class="none">
+      暂无地址 <text bindtap='address'>点击添加</text>
+    </view>
+  </block>
+</view>

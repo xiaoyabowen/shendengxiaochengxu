@@ -1,0 +1,249 @@
+/* pages/useraddress/useraddress/useraddress.wxss */
+/* 地址信息 */
+
+.content{
+  padding: 0 20rpx;
+  
+}
+
+.address-box{
+  overflow: hidden;
+  border-radius: 30rpx 30rpx 0rpx 0rpx;
+  min-height: calc(100vh - 162rpx);
+  background: #fff;
+  padding-bottom: 142rpx;
+}
+
+.address{
+  padding: 61rpx 37rpx 25rpx 53rpx;
+  border-bottom: 2rpx solid #0D79BE; 
+}
+.addressNone{
+  display: none;
+}
+/* 用户名 */
+.user{
+  display: flex;
+  margin-bottom: 34rpx;
+  
+}
+.user-name{
+  margin-right: 30rpx;
+  min-width: 50rpx;
+  font-size: 26rpx;
+  color: #0D0C0C;
+  font-weight: bold;
+}
+.user-phone{
+  font-size: 24rpx;
+  color: #000;
+  font-weight: bold;
+}
+.user-address{
+  border-bottom: 1rpx solid #f7f7f7;
+  padding-bottom: 20rpx;
+}
+.address-style{
+  font-size: 24rpx;
+  color: #787777;
+
+}
+/* 编辑设为默认 */
+.edit{
+  display: flex;
+  height: 74rpx;
+}
+.edit-left{
+  flex: 1;
+  align-items: center;
+}
+.edit-right{
+  display: flex;
+  
+  align-items: center;
+}
+.edit-btn,.del-btn{
+  display: flex;
+}
+.edit-img,.del-img{
+  width: 30rpx;
+  height: 34rpx;
+  margin-right: 6rpx;
+}
+
+
+/*  重写 checkbox 样式  */
+/* 未选中的 背景样式 */
+.checkbox{
+  display: block;
+   border-radius: 50%;/* 圆角 */
+   width: 28rpx; /* 背景的宽 */
+   height: 28rpx; /* 背景的高 */
+   border: 1rpx solid #000;
+   margin-right: 13rpx;
+}
+
+ /* .checkboxmoren{
+  display: block;
+  border-radius: 50%;
+  width: 28rpx; 
+   height: 28rpx;
+}  */
+.quecheckimg{
+  display: block;
+  width: 28rpx;
+  height: 28rpx;
+  margin-right: 13rpx;
+} 
+.morencheckimg{
+  display: block;
+  width: 28rpx;
+  height: 28rpx;
+  margin-right: 13rpx;
+} 
+.xianshi{
+  display: none;
+}
+.edit-check{
+  /* margin-right: 13rpx; */
+}
+
+.edit-btn{
+  margin-right: 28rpx;
+}
+.edit-font{
+  position: relative;
+  font-size: 24rpx;
+  color: #000;
+  height: 74rpx;
+  line-height: 74rpx;
+  display: flex;
+  /* flex: 1;
+  justify-content: flex-start; */
+  align-items: center;
+}
+.edit-edit,.del-font{
+  font-size: 24rpx;
+  color: #000;
+  height: 34rpx;
+  line-height: 34rpx;
+}
+.moren{
+  color: #FAB53E;
+}
+
+/* 添加地址按钮 */
+.address-renew{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 86%;
+  background: #fff !important;
+  height: 94rpx;
+  border-radius: 47rpx;
+  box-shadow:0px 4px 20px rgba(21,115,153,0.18);
+  position: fixed;
+  left: 0;
+  bottom: 48rpx;
+  margin: 0 52rpx;
+  pointer-events:auto;
+}
+.add-btn{
+  width: 37rpx;
+  height: 37rpx;
+  margin-right: 18rpx;
+}
+.address-color{
+  color: #0D79BE;
+  font-size: 36rpx;
+}
+
+/*遍历循环的数据没有了要显示的部分*/
+/* .shows{
+  width: 100%;
+  height: 100px;
+  background-color: orangered;
+  text-align: center;
+  line-height: 100px;
+} */
+
+
+/* 弹框 */
+.show-btn {
+ margin-top: 100rpx;
+ color: #22cc22;
+}
+ 
+.modal-mask {
+ width: 100%;
+ height: 100%;
+ position: fixed;
+ top: 0;
+ left: 0;
+ background: #000;
+ opacity: 0.3;
+ overflow: hidden;
+ z-index: 9000;
+ color: #fff;
+}
+ 
+.modal-dialog {
+ width: 540rpx;
+ overflow: hidden;
+ position: fixed;
+ top: 50%;
+ left: 0;
+ z-index: 9999;
+ background: #f9f9f9;
+ margin: -180rpx 105rpx;
+ border-radius: 36rpx;
+ padding-bottom: 14rpx;
+}
+ 
+.modal-title {
+ padding: 26rpx 0 23rpx 0;
+ font-size: 48rpx;
+ color: #030303;
+ text-align: center;
+}
+.model-line{
+  width: 540rpx;
+  height: 4rpx;
+  background:rgba(0,0,0,1);
+  opacity:0.02; 
+}
+.modal-content {
+ padding: 47rpx 0 63rpx 0;
+ font-size: 24rpx;
+ color: #000000;
+ text-align: center;
+}
+ 
+ /* 关闭 */
+.btn-cancel {
+ color: #666;
+ text-align: center;
+ position: absolute;
+ right: 28rpx;
+ top: 26rpx;
+}
+.close-img{
+  width: 40rpx;
+  height: 40rpx;
+}
+.btn-confirm {
+ width: 86%;
+ color: #0D79BE;
+ text-align: center;
+ height: 63rpx;
+ line-height: 63rpx;
+ font-size: 28rpx;
+ border: 2rpx solid #0D79BE;
+ border-radius: 30rpx;
+ margin: 0 40rpx;
+}
+
+
+
+
+

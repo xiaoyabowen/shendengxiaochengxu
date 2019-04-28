@@ -1,0 +1,46 @@
+<!--支付  -->
+<view class='content'>
+<!-- 开通  续费  title -->
+  <view class='open-text'>
+    <text class='open-open'>支付</text>
+  </view>
+  <!-- 支付类型框 -->
+  <view class='open-type' wx:if="{{openstudy}}" style='background-image:url("https://www.flaxl.cn/uploads/set-type-bj.png"); background-size:100% 100%;'>
+
+    <view class='type-title'>您当前所剩套餐次数为{{allNnb}}次</view>
+    <text class='type-title'>本次支付将消耗1次</text>
+  </view>
+
+
+  <view class='open-type' wx:else style='background-image:url("https://www.flaxl.cn/uploads/set-type-bj.png"); background-size:100% 100%;'>
+
+    <view class='type-title'>您当前没有开通任何套餐</view>
+    <navigator bindtap='open_btn' class='open_btn'>开通</navigator>
+  </view>
+
+  <!-- 微信支付label -->
+  <view class="open-section" hidden='{{openstudy}}'>
+      <label class='saet-font'>
+        <view class='open-paymoney'>
+          <view class='open-img'>
+            <image src="../../images/wekat-pay.png"></image>            
+          </view>
+          <view class='open-term'>
+            <view class='open-pay'>微信支付</view>
+            <view class='open-font'>推荐安装微信5.0及以上版本使用</view>
+          </view>
+          
+        </view>
+        <!-- <checkbox value="checkbox1" class='open-check'/> -->
+      </label>
+  </view>
+
+  <!-- 确认支付按钮 -->
+  <view class='set-btn'>
+    <view url='' bindtap='submit' class='setting-renew'>
+      确认支付
+      <text hidden='{{openstudy}}' class='renew-color'>￥{{ci_money}}</text>
+    </view>
+  </view>
+
+</view>

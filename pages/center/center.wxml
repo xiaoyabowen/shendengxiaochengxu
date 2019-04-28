@@ -1,0 +1,98 @@
+<!--pages/center/center.wxml-->
+<view class='main'>
+  <!--头像  -->
+  <view class='header'>
+
+    <view class='headbox'>
+      <view class='bor-1'>
+        <view class='bor-2'>
+          <image src='{{headimg}}' mode="aspectFill"></image>
+        </view>
+      </view>
+    </view>
+
+    <view class='textbox'>
+      <view class='name'>{{username}}</view>
+      <view class='tel'>{{tel}}</view>
+    </view>
+  </view>
+  <view class='content'>
+
+    <navigator class='li' hover-class='none' url='../ordertype/ordertype'>
+      <view class='icon'>
+        <image src='../../images/lib/center/order3x.png'></image>
+      </view>
+      <view class='info'>
+        我的订单
+      </view>
+      <view class='right'>
+        <image src='../../images/lib/center/right3x.png'></image>
+      </view>
+    </navigator>
+
+    <navigator class='li' hover-class='none' url='../discuss/discuss'>
+
+      <view class='icon'>
+        <image src='../../images/lib/center/ping3x.png'></image>
+      </view>
+      <view class='info'>
+        评论列表
+      </view>
+      <view class='right'>
+        <image src='../../images/lib/center/right3x.png'></image>
+      </view>
+    </navigator>
+
+    <navigator class='li' hover-class='none' url='../useraddress/useraddress'>
+
+      <view class='icon'>
+        <image src='../../images/lib/center/address3x.png'></image>
+      </view>
+      <view class='info'>
+        地址管理
+      </view>
+      <view class='right'>
+        <image src='../../images/lib/center/right3x.png'></image>
+      </view>
+    </navigator>
+
+    <navigator class='li' hover-class='none' url='../userInfo/userInfo'>
+
+      <view class='icon'>
+        <image src='../../images/lib/center/ren3x.png'></image>
+      </view>
+      <view class='info'>
+        认证管理
+      </view>
+      <view class='right'>
+        <view wx:if="{{ren == 1}}" class='rz'>
+          已认证
+        </view>
+        <view wx:if="{{ren == 2}}" class='rz'>
+          未认证
+        </view>
+        <view wx:if="{{ren == 3}}" class='rz'>
+          认证中
+        </view>
+        <view wx:if="{{ren == 4}}" class='rz'>
+          未通过
+        </view>
+        <image src='../../images/lib/center/right3x.png'></image>
+      </view>
+    </navigator>
+
+    <navigator class='li' hover-class='none' url='../serviceSetting/serviceSetting'>
+
+      <view class='icon'>
+        <image src='../../images/lib/center/server3x.png'></image>
+      </view>
+      <view class='info'>
+        服务费设置
+      </view>
+      <view class='right'>
+        <image src='../../images/lib/center/right3x.png'></image>
+      </view>
+    </navigator>
+  </view>
+  
+</view>

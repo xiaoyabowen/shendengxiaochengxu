@@ -1,0 +1,102 @@
+<view class="body">
+  <!--订单管理   header  -->
+  <!--4个选项卡切换标签  -->
+  <view class="nav bc_white">
+    <!--模块1  -->
+    <view class='tab' bindtap="selected">
+      <view>
+        <image src='../../images/all3x.png'></image>
+      </view>
+      <view class="btn {{selected?'yellow':'default'}}">全部订单</view>
+    </view>
+    <!--模块2  -->
+    <view class='tab' bindtap="selected5">
+      <view>
+        <image src='../../images/wfk3x.png'></image>
+      </view>
+      <view class="btn {{selected5?'skyblue':'default'}}">待付款</view>
+    </view>
+    <!--模块3  -->
+    <view class='tab' bindtap="selected1">
+      <view>
+        <image src='../../images/tbd3x.png'></image>
+      </view>
+      <view class="btn {{selected1?'blue':'default'}}">待完成</view>
+    </view>
+    <!--模块4  -->
+    <view class='tab' bindtap="selected2">
+      <view>
+        <image src='../../images/ofs3x.png'></image>
+      </view>
+      <view class="btn {{selected2?'green':'default'}}">已完成</view>
+    </view>
+    <!--模块5  -->
+    <view class='tab' bindtap="selected3">
+      <view>
+        <image src='../../images/eval3x.png'></image>
+      </view>
+      <view class="btn {{selected3?'red':'default'}}">待评价</view>
+    </view>
+
+
+  </view>
+
+  <!--切换的内容  -->
+  <!-- 引用模板 -->
+  <import src="../template/template" />
+  <import src="../template/template2" />
+
+  <!--全部订单   引用模板2    其他订单引用模板1  -->
+
+  <view class="{{selected?'show':'hidden'}}">
+    <!--根据传过去的用户user_Id  判断是否授权   未授权报错  -->
+    <view class="none" wx:if="{{error == true}}">
+      暂时还没有订单哦！
+    </view>
+    <!--用户已经授权  会渲染模板 template2  -->
+    <view wx:else>
+      <template is="index2" data="{{orderList}}"></template>
+    </view>
+  </view>
+
+  <view class="{{selected1?'show':'hidden'}}">
+    <view class="none" wx:if="{{error == true}}">
+      暂时还没有订单哦！
+    </view>
+    <!--用户已经授权  会渲染模板 template1  -->
+    <view wx:else>
+      <template is="index" data="{{orderList,study:'待完成'}}"></template>
+    </view>
+  </view>
+
+  <view class="{{selected2?'show':'hidden'}}">
+    <view class="none" wx:if="{{error == true}}">
+      暂时还没有订单哦！
+    </view>
+    <!--用户已经授权  会渲染模板 template1  -->
+    <view wx:else>
+      <template is="index" data="{{orderList,study:'已完成'}}"></template>
+    </view>
+  </view>
+
+  <view class="{{selected3?'show':'hidden'}}">
+    <view class="none" wx:if="{{error == true}}">
+      暂时还没有订单哦！
+    </view>
+    <!--用户已经授权  会渲染模板 template1  -->
+    <view wx:else>
+      <template is="index" data="{{orderList,study:'待评价'}}"></template>
+    </view>
+  </view>
+
+  <view class="{{selected5?'show':'hidden'}}">
+    <view class="none" wx:if="{{error == true}}">
+      暂时还没有订单哦！
+    </view>
+    <!--用户已经授权  会渲染模板 template1  -->
+    <view wx:else>
+      <template is="index" data="{{orderList,study:'待付款'}}"></template>
+    </view>
+  </view>
+
+</view>

@@ -1,0 +1,39 @@
+/**app.wxss**/
+@import "utils/common.wxss";
+
+/*清除浮动代码*/ 
+.clearfloat:after{display:block;clear:both;content:"";visibility:hidden;height:0} 
+.clearfloat{zoom:1} 
+
+
+
+.container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 200rpx 0;
+  box-sizing: border-box;
+} 
+page{
+    width: 100%; height: auto;
+    background: -webkit-linear-gradient(left top, #48cbe0 , #0068b7) no-repeat fixed top; /* Safari 5.1 - 6.0 */
+    background: -o-linear-gradient(bottom right, #48cbe0, #0068b7) no-repeat fixed top; /* Opera 11.1 - 12.0 */
+    background: -moz-linear-gradient(bottom right, #48cbe0, #0068b7) no-repeat fixed top; /* Firefox 3.6 - 15 */
+    background: linear-gradient(to bottom right, #48cbe0 , #0068b7) no-repeat fixed top; /* 标准的语法（必须放在最后） */
+  padding-top:20rpx;
+
+}
+
+
+
+/*  motai1的样式  */
+.motai1-mask{position: absolute; top: 0rpx; left: 0rpx; right: 0rpx; bottom: 0rpx; background: #000;opacity: 0.3;overflow: hidden;z-index: 90;color: #fff;}
+ .motai1-dialog{width: 590rpx; height: auto; background: #ffffff;padding: 60rpx 30rpx 30rpx; margin: 0 auto; border-radius: 20rpx;box-shadow:5px 8px 27px rgba(21,115,153,0.26); position:absolute; top: 50%; left: 50%; transform: translate(-50%,-50%); z-index: 99; }
+.motai1-title{font-size: 48rpx; color: #FB5265; text-align: center; font-weight: bold;}
+.motai1-content{padding: 40rpx 0rpx; font-size: 30rpx;}
+.motai1-footer{width: 500rpx; height: 72rpx; line-height: 72rpx; margin: 0 auto; text-align: center; color:#ffffff;}
+.motai1-btn-confirm,.motai1-btn-cancel{width: 174rpx; height: 72rpx;border-radius: 36rpx; font-size: 30rpx;}
+.motai1-btn-confirm{  float: left; background: linear-gradient(to bottom right, #34E8AF,#13C2C4) no-repeat;}
+.motai1-btn-cancel{ float: right; background:linear-gradient(to bottom right, #F8CE64,#FCAD79) no-repeat;}

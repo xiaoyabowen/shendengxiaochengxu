@@ -1,0 +1,65 @@
+/* pages/my/user/userInfo/userInfo.wxss */
+/*   点击上传图片按钮样式  */
+.weui-uploader__input-box {
+  margin: 0 auto;
+  position: relative;
+  width: 56rpx;
+  height: 56rpx;
+  border: 1px dashed #D9D9D9;
+  margin-top: 70rpx;
+}
+.weui-uploader__input-box:before,
+.weui-uploader__input-box:after {
+  content: " ";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  background-color: #D9D9D9;
+}
+.weui-uploader__input-box:before {
+  width: 2px;
+  height: 20px;
+}
+.weui-uploader__input-box:after {
+  width: 20px;
+  height: 2px;
+}
+.weui-uploader__input-box:active {
+  border-color: #999999;
+}
+.weui-uploader__input-box:active:before,
+.weui-uploader__input-box:active:after {
+  background-color: #999999;
+}
+.weui-uploader__input {
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+}
+
+.centent{width: 710rpx; height: auto; padding: 100rpx 20rpx;}
+.form1{width: 710rpx; border-radius: 20rpx;background: #ffffff;}
+.form1 .item{width: 650rpx; height: 30rpx; line-height: 30rpx; padding: 25rpx 30rpx; font-size: 24rpx;}
+.form1 .item:first-child{border-bottom: 2rpx solid #000000;}
+.form1 .item .lable{width: 100rpx; float: left;}
+.form1 .item input{display: block; float: left; height: 30rpx; line-height: 30rpx; margin-top: -10rpx;}
+
+.form2{width: 710rpx; height: auto; margin:35rpx 0rpx 50rpx 0rpx; }
+.form2 .item{width: 710rpx; height: 250rpx; margin-top: 20rpx;}
+.form2 .item .leImg{width: 440rpx; height: 250rpx; float: left; margin-right: 20rpx; border-radius: 20rpx; overflow: hidden;}
+.form2 .item .leImg image{display: block;width: 100%; height: 100%;}
+.form2 .item .shenfenzheng-box{width: 250rpx; height: 250rpx; background: #ffffff; border-radius: 20rpx; text-align: center; font-size: 24rpx; float: right; overflow: hidden;}
+.form2 .item .title{position: relative; top: 10rpx;}
+.form2 .item .up-img{position: relative;}
+.form2 .item .up-img image{display: block; width: 250rpx; height: 250rpx;}
+.form2 .item .up-img .newUpload{width: 60rpx; height: 60rpx; position: absolute; top: 10rpx; right: 10rpx;}
+.form2 .item .up-img .newUpload image{display: block; width: 60rpx; height: 60rpx;}
+
+.button{width: 710rpx; height: 80rpx; line-height: 80rpx; text-align: center; font-size: 36rpx; margin-top: 50rpx; background: #ffffff; border-radius: 40rpx; overflow: hidden;}
+

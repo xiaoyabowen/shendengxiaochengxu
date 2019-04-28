@@ -1,0 +1,66 @@
+<!--pages/my/order/paysetting/paysetting.wxml-->
+<!--服务费设置  页面-->
+
+
+<!-- 具体支付类型 自定义模板 -->
+<template name="setting">
+  <view class='setting-type'>
+    <view class='set-bar'>{{bar}}</view>
+    <view class='open-server'>开通</view>
+    <view class='set-price'><text class='set-mon'>￥</text>{{price}}</view>
+  </view>
+</template>
+
+
+
+
+<!-- 历史账单 期限 -->
+<view class='content'>
+  <view class='setting-header'>
+    <!-- header头部左部分 -->
+    <view class='setting-left'>
+      <view class='setting-img' wx-if="{{setLogin}}">
+        <image src='{{settingLogin.setLoginImg}}'></image>
+      </view>
+      <!-- 未登录 -->
+      <view class='setting-img'>
+        <image src='{{settingNoneLogin.setLoginImg}}'></image>
+      </view>
+      
+      <view class='setting-term'>
+        <view class='date-fre' wx-if="{{setLogin}}">{{settingLogin.setDate}}到期</view>
+        <view class='suc-fre' wx-if="{{setLogin}}">{{settingLogin.setSucfont}}</view>
+        <!-- 未登录状态文字 -->
+        <view class='suc-no-fre'>{{settingNoneLogin.setSucfont}}</view>
+      </view>
+    </view>
+    <!-- header 肉不右部分 -->
+    <view class='setting-right'>
+      <button type="primary" class='setting-btn'>历史账单</button>
+    </view>
+  </view>
+  <!-- 当前剩余次数 -->
+  <view class='setting-fre'>
+    <view>当前剩余次数
+      <text class='setting-bigfont'>111</text>次</view>
+  </view>
+
+  <!-- 具体的支付类型 -->
+
+  <block wx:for="{{settings}}">
+      <template is="setting" data="{{...item}}"></template> 
+  </block>
+  
+  <!-- 选框一次性付款 -->
+  <view class="set-section">
+    <checkbox-group name="checkbox">
+      <label class='saet-font'><checkbox value="checkbox1" class='set-check' />一次性付款，一年内用户可进行5次的订单发起,时间不限，用完为止。</label>
+    </checkbox-group>
+  </view>
+
+  <!-- 立即续费按钮 -->
+  <button type="primary" class='setting-renew'>立即开通 <text class='renew-color'>￥170</text></button>
+
+
+
+</view>
